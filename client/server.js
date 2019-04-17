@@ -5,7 +5,7 @@ var helmet = require('helmet');
 
 var app = express();
 app.use(helmet());
-app.use(compression()); 
+app.use(compression());
 
 app.use(morgan("combined"));
 
