@@ -23,7 +23,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>Server is saying:</p>
           <p>
-            {this.state.data}
+            //{this.state.data}
           </p>
 
         </header>
