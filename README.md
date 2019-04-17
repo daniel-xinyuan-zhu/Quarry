@@ -8,8 +8,12 @@ Want to learn how deployment of this application was done? Click [here](https://
 # Deployment (From your local machine):
 1. Navigate to any local directory
 2. Use Rsync to copy over all existing local files over to EC2 instance:
-`rsync -ravze “<Your AWS Pem Key Here>” —exclude ‘.git/‘ —exclude ‘node_modules/‘ AppDirectory/Quarry/client/*  ec2-user@ec2-18-188-99-154.us-east-2.compute.amazonaws.com:/home/ec2-user/var/www/myapp/client`
-`rsync -ravze “<Your AWS Pem Key Here>” —exclude ‘.git/‘ —exclude ‘node_modules/‘ AppDirectory/Quarry/server/*  ec2-user@ec2-18-188-99-154.us-east-2.compute.amazonaws.com:/home/ec2-user/var/www/myapp/server`
+```
+rsync -ravze “<Your AWS Pem Key Here>” —exclude ‘.git/‘ —exclude ‘node_modules/‘ AppDirectory/Quarry/client/*  ec2-user@ec2-18-188-99-154.us-east-2.compute.amazonaws.com:/home/ec2-user/var/www/myapp/client
+```
+```
+rsync -ravze “<Your AWS Pem Key Here>” —exclude ‘.git/‘ —exclude ‘node_modules/‘ AppDirectory/Quarry/server/*  ec2-user@ec2-18-188-99-154.us-east-2.compute.amazonaws.com:/home/ec2-user/var/www/myapp/server
+```
 Note that we `rsync` twice, once for client, and once for server.
 
 # Deployment (AWS End):
