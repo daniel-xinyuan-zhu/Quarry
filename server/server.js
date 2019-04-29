@@ -12,5 +12,9 @@ app.get('/sayHello', function(req, res){
   res.send('Hello from the back-end.');
 });
 
+app.get('/sayGreeting', function(req,res) {
+  res.send('Greetings from the back end!');
+});
+
 app.listen(APP_PORT);
 console.log('Webserver listening to port', APP_PORT);
