@@ -23,3 +23,5 @@ Note that we `rsync` twice, once for client, and once for server.
 `cd /home/ec2-user/var/www/myapp/`
 3. Start the server and client applications using the pm2 script:
 `pm2 start Quarry.config.js`
+
+Hello! 
