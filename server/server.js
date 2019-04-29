@@ -12,8 +12,9 @@ app.get('/sayHello', function(req, res){
   res.send('Hello from the back-end.');
 });
 
-app.get('/sayGreeting', function(req,res) {
-  res.send('Greetings from the back end!');
+app.get('/greetStudents', function(req, res) {
+  console.log("Github is really hard to learn.");
+  res.send('Happy Monday!');
 });
 
 app.listen(APP_PORT);
