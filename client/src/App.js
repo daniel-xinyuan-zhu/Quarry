@@ -2,30 +2,31 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
+import styles from './index.css';
 
 class App extends Component {
   state = {
     data: ''
   }
   componentDidMount = () => {
-    // Make sure to change the (localhost) on the line bellow
-    // to the public DNS of your EC2 instance
     axios.get(`ec2-18-188-99-154.us-east-2.compute.amazonaws.com`)
     .then(res => {
       const dataFromServer = res.data;
       this.setState({ data: dataFromServer });
     });
   }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>Server is saying:</p>
-          <p>
-            //{this.state.data}
-          </p>
-
+          <form onSubmit={this.handleSubmit}>
+            <h1>Type in a question!</h1>
+            <div className="search-bar">
+              <input type="text" value={this.state.value}></input>
+            </div>
+            <input type="submit" value="Submit" />
+          </form>
         </header>
       </div>
     );
