@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #F2F2F2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,11 +22,86 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* --------------------------------------------------- */
+.whole-search{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar{
+  height:30px;
+  width:460px;
+  font-size:15px;
+}
+
+.search-icon{
+  background-color: #28ABE2;
+  margin-top:5px;
+  height:28px;
+  width: 30px;
+  padding:3px;
+  border: none;
+}
+
+::placeholder{
+  color:#979797;
+}
+
+.sub-button{
+  margin-top: 20px;
+  width:120px;
+  height:50px;
+  background-color:#28ABE2;
+  border: none;
+  font-size:18px;
+  color: white;
+
+}
+
+h1{
+  color: #28ABE2;
+  font-size:30px;
+}
+
+.bg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 500px;
+  width: 600px;
+}
+
+/* ---------------NAVBAR ------------------*/
+.nav{
+  height:70px;
+  width:100%;
+  position: fixed;
+  top:0px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#nav-search{
+  position: fixed;
+  right: 20px;
+}
+
+.intro{
+  color: #979797;
+  text-align: left;
+  font-size: 20px;
+  padding: 0px 50px 10px 50px;
+  line-height:25px;
+}
+
+.quarry-logo{
+  height:50px;
+  position: fixed;
+  left:20px;
+  top:10px;
 }
