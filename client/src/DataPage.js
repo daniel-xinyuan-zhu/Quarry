@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import logo from './quarry.png';
 import icon from './search.png';
-import bar from './datadrawing.svg';
+import bar from './datadrawing.svg'
 import './App.css';
 import styles from './index.css';
 
-
-export default class App extends Component {
+class DataPage extends Component {
   state = {
     data: ''
   }
@@ -21,8 +20,8 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="DataPage">
+        <header className="DataPage-header">
 
         {/* -----------------NAVIGATION BAR ------------------------*/}
         <div className="nav">
@@ -43,7 +42,7 @@ export default class App extends Component {
             <img className="data-draw" src={bar}></img>
           </div>
           <div>
-            <h1>Making Data Access Easy</h1>
+            <h1>Borussia</h1>
             <p className="intro">Quarry is a conversational system that provides users with a non-technical way to query large data sets. Simply type in questions about data in a data set, and Quarry will quickly supply and visualize answers!</p>
             <p className="intro">Search for a data set to get started!</p>
           </div>
@@ -60,3 +59,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default DataPage;

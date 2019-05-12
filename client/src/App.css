@@ -59,6 +59,9 @@
 
 }
 
+.data-draw{
+  height:120px;
+}
 h1{
   color: #28ABE2;
   font-size:30px;
