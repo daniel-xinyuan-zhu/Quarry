@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-
-import * as serviceWorker from './serviceWorker';
+import Routes from './components/Routes.js';
 import './index.css';
+import _ from 'lodash';
 
-import App from './components/App';
-import HomePage from './components/HomePage';
-import DataSet from './components/DataSet';
-import DisplayData from './components/DisplayData';
-
-ReactDOM.render(<HomePage/>, document.getElementById("root"));
+ReactDOM.render(<Routes/>, document.getElementById("root"));
+  

@@ -1,6 +1,8 @@
 // -------------------------------------------------IMPORTS--------------------------------------------------------
 import React, { Component } from 'react';
 import axios from 'axios';
+import Routes from './Routes.js';
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
 
 // import photos and icons
 import logo from './images/quarry.png'
@@ -13,7 +15,12 @@ import './App.css';
 
 export default class HomePage extends Component {
   state = {
-    data: ''
+    toDashboard: false,
+  }
+  handleSubmit = (user) => {
+    this.setState(() => ({
+        toDashboard: true
+      }))
   }
   componentDidMount = () => {
     axios.get(`ec2-18-188-99-154.us-east-2.compute.amazonaws.com`)
@@ -25,6 +32,9 @@ export default class HomePage extends Component {
   
 
   render() {
+    if (this.state.toDashboard === true) {
+      return <Redirect to='/dataset' />
+    }
     return (
       <div className="HomePage">
         <header className="App-header">
@@ -55,6 +65,9 @@ export default class HomePage extends Component {
           <form onSubmit={this.handleSubmit}>
             <div className="whole-search">
               <input className="search-bar" type="text" value={this.state.value} placeholder="Search for a data set"></input>
+              {/* <Router>
+                <Link to='/dataset'>Link</Link>
+              </Router> */}
               <div><input className="search-icon" type="image" src={icon}/></div>
             </div>
             {/* <div><input className="sub-button" type="submit" value="search" /></div> */}

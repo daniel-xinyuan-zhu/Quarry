@@ -1,6 +1,8 @@
 // -------------------------------------------------IMPORTS--------------------------------------------------------
 import React, { Component } from 'react';
 import axios from 'axios';
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
+
 
 // import photos and icons
 import logo from './images/quarry.png';
@@ -13,7 +15,12 @@ import './App.css';
 
 export default class DataSet extends Component {
   state = {
-    data: ''
+    toDashboard: false,
+  }
+  handleSubmit = (user) => {
+    this.setState(() => ({
+        toDashboard: true
+      }))
   }
   componentDidMount = () => {
     axios.get(`ec2-18-188-99-154.us-east-2.compute.amazonaws.com`)
@@ -24,6 +31,9 @@ export default class DataSet extends Component {
   }
   
   render() {
+    if (this.state.toDashboard === true) {
+      return <Redirect to='/displaydata' />
+    }
     return (
       <div className="DataSet">
         <header className="App-header">
