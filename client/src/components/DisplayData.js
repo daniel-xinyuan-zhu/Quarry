@@ -1,12 +1,17 @@
+// -------------------------------------------------IMPORTS--------------------------------------------------------
 import React, { Component } from 'react';
 import axios from 'axios';
-import logo from './quarry.png';
-import icon from './search.png';
-import bar from './datadrawing.svg'
-import './App.css';
-import styles from './index.css';
 
-class DataPage extends Component {
+// import photos and icons
+import logo from './images/quarry.png';
+import icon from './images/search.png';
+import downloadIcon from './images/download-icon.png';
+
+// import CSS files
+import './App.css';
+
+
+export default class DisplayData extends Component {
   state = {
     data: ''
   }
@@ -17,11 +22,11 @@ class DataPage extends Component {
       this.setState({ data: dataFromServer });
     });
   }
-
+  
   render() {
     return (
-      <div className="DataPage">
-        <header className="DataPage-header">
+      <div className="DisplayData">
+        <header className="App-header">
 
         {/* -----------------NAVIGATION BAR ------------------------*/}
         <div className="nav">
@@ -37,27 +42,26 @@ class DataPage extends Component {
         </div>
 
         {/* ------------------BODY -------------------------------*/}
-        <div className="bg">
+        <div className="bg" id="smaller-div">
           <div>
-            <img className="data-draw" src={bar}></img>
-          </div>
-          <div>
-            <h1>Borussia</h1>
-            <p className="intro">Quarry is a conversational system that provides users with a non-technical way to query large data sets. Simply type in questions about data in a data set, and Quarry will quickly supply and visualize answers!</p>
-            <p className="intro">Search for a data set to get started!</p>
+            <div className="title-div">
+              <h1>Borussia Dortmund</h1>
+              <input className="download-icon" type="image" src={downloadIcon}/></div>
+            </div>
+            <div>
+            <p className="intro">Data on date, opponent, result, and rating for each game.</p>
           </div>
           <form onSubmit={this.handleSubmit}>
             <div className="whole-search">
-              <input className="search-bar" type="text" value={this.state.value} placeholder="Search for a data set"></input>
+              <input className="search-bar" type="text" value={this.state.value} placeholder="Enter a question."></input>
               <div><input className="search-icon" type="image" src={icon}/></div>
             </div>
-            {/* <div><input className="sub-button" type="submit" value="search" /></div> */}
           </form>
+          <div id="datatable"></div>
+          <div className="bar"></div>
           </div>
         </header>
       </div>
     );
   }
 }
-
-export default DataPage;

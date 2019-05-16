@@ -1,13 +1,17 @@
+// -------------------------------------------------IMPORTS--------------------------------------------------------
 import React, { Component } from 'react';
 import axios from 'axios';
-import logo from './quarry.png';
-import icon from './search.png';
-import bar from './datadrawing.svg';
+
+// import photos and icons
+import logo from './images/quarry.png'
+import icon from './images/search.png';
+import bar from './images/datadrawing.svg'
+
+// import CSS files
 import './App.css';
-import styles from './index.css';
+// ----------------------------------------------------------------------------------------------------------------
 
-
-export default class App extends Component {
+export default class HomePage extends Component {
   state = {
     data: ''
   }
@@ -18,10 +22,11 @@ export default class App extends Component {
       this.setState({ data: dataFromServer });
     });
   }
+  
 
   render() {
     return (
-      <div className="App">
+      <div className="HomePage">
         <header className="App-header">
 
         {/* -----------------NAVIGATION BAR ------------------------*/}
