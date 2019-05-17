@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html>
-<meta charset="utf-8">
-<head>
-<title>Table With Embedded Line Chart</title>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<link rel="stylesheet" href="http://billmill.org/css/style.css" />
-<style>
-table {
-  border-collapse: collapse;
-}
-th {
-  border-bottom: 2px solid #ddd;
-  padding: 8px;
-  font-weight: bold;
-}
-td {
-  padding: 8px;
-  border-top: 1px solid #ddd;
-}
-#chart {
-  padding: 0px;
-}
-.xaxislabel {
-  font-size: 9px;
-}
-</style>
-</head>
-<body>
-
-<div id="datatable"></div>
-
-<script>
-
+var d3 = require("d3");
 var rows = []
 var formatdate = d3.time.format("%b %d %Y");
 
@@ -90,7 +57,7 @@ d3.csv("dortmund.csv", function(error, csv) {
 
   var maxMu = 0;
   var minMu = Number.MAX_VALUE;
-  for (i=0; i < rows.length; i++) {
+  for (var i=0; i < rows.length; i++) {
     if (rows[i].mu > maxMu) { maxMu = rows[i].mu; }
     if (rows[i].mu < minMu) { minMu = rows[i].mu; }
   }
@@ -149,6 +116,3 @@ d3.csv("dortmund.csv", function(error, csv) {
       .attr("fill", "#ff0000");
 
 });
-</script>
-</body>
-</html>
