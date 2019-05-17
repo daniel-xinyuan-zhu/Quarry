@@ -15,7 +15,7 @@ import './App.css';
 
 export default class DataSet extends Component {
   state = {
-    toDashboard: false,
+    toDashboard: false
   }
   handleSubmit = (user) => {
     this.setState(() => ({
@@ -51,7 +51,7 @@ export default class DataSet extends Component {
           </div>
         </div>
 
-        {/* ------------------BODY -------------------------------*/}
+        {/* -----------------------------BODY -------------------------------*/}
         <div className="bg" id="smaller-div">
           <div>
             <div class="title-div">
@@ -66,8 +66,7 @@ export default class DataSet extends Component {
               <input className="search-bar" type="text" value={this.state.value} placeholder="Enter a question."></input>
               <div><input className="search-icon" type="image" src={icon}/></div>
             </div>
-            {/* <div><input className="sub-button" type="submit" value="search" /></div> */}
-          </form>
+          </form>   
           </div>
         </header>
       </div>

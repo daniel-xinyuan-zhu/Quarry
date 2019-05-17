@@ -11,6 +11,7 @@ import bar from './images/datadrawing.svg'
 
 // import CSS files
 import './App.css';
+
 // ----------------------------------------------------------------------------------------------------------------
 
 export default class HomePage extends Component {
@@ -52,25 +53,21 @@ export default class HomePage extends Component {
           </div>
         </div>
 
-        {/* ------------------BODY -------------------------------*/}
+        {/* -----------------------------BODY -------------------------------*/}
         <div className="bg">
-          <div>
-            <img className="data-draw" src={bar}></img>
-          </div>
+          {/* introduction */}
+          <div><img className="data-draw" src={bar}></img></div>
           <div>
             <h1>Making Data Access Easy</h1>
             <p className="intro">Quarry is a conversational system that provides users with a non-technical way to query large data sets. Simply type in questions about data in a data set, and Quarry will quickly supply and visualize answers!</p>
             <p className="intro">Search for a data set to get started!</p>
           </div>
+          {/* form for search bar */}
           <form onSubmit={this.handleSubmit}>
             <div className="whole-search">
               <input className="search-bar" type="text" value={this.state.value} placeholder="Search for a data set"></input>
-              {/* <Router>
-                <Link to='/dataset'>Link</Link>
-              </Router> */}
               <div><input className="search-icon" type="image" src={icon}/></div>
             </div>
-            {/* <div><input className="sub-button" type="submit" value="search" /></div> */}
           </form>
           </div>
         </header>

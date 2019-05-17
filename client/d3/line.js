@@ -1,4 +1,6 @@
-var d3 = require("d3");
+import React, { Component } from 'react';
+import * as d3 from "d3";
+
 var rows = []
 var formatdate = d3.time.format("%b %d %Y");
 
@@ -21,8 +23,8 @@ d3.csv("dortmund.csv", function(error, csv) {
   });
 
   var table = d3.select("#datatable").append("table");
-      thead = table.append("thead");
-      tbody = table.append("tbody");
+  var thead = table.append("thead");
+  var tbody = table.append("tbody");
 
   thead.append("th").text("Date");
   thead.append("th").text("Opponent");

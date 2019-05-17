@@ -10,7 +10,6 @@ import downloadIcon from './images/download-icon.png';
 // import CSS files
 import './App.css';
 
-
 export default class DisplayData extends Component {
   state = {
     data: ''
@@ -45,7 +44,7 @@ export default class DisplayData extends Component {
         <div className="bg" id="smaller-div">
           <div>
             <div className="title-div">
-              <h1>Borussia Dortmund</h1>
+              <h1>The value is: </h1>
               <input className="download-icon" type="image" src={downloadIcon}/></div>
             </div>
             <div>
@@ -57,8 +56,6 @@ export default class DisplayData extends Component {
               <div><input className="search-icon" type="image" src={icon}/></div>
             </div>
           </form>
-          <div id="datatable"></div>
-          <div className="bar"></div>
           </div>
         </header>
       </div>
