@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <style>
 
-body {
+node {
   font: 10px sans-serif;
 }
 
@@ -59,6 +59,8 @@ body {
 <script src="tip.js"></script>
 <script>
 
+var node = document.createElement('div');
+
 var margin = {top: 40, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -87,7 +89,7 @@ var tip = d3.tip()
     return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
   })
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("node").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
