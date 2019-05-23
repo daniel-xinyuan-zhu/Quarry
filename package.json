@@ -1,0 +1,19 @@
+{
+  "name": "quarry",
+  "version": "1.0.0",
+  "description": "Data visualization isn't always easy when you don't have time to fire up a database instance and poll data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-xinyuan-zhu/Quarry.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-xinyuan-zhu/Quarry/issues"
+  },
+  "homepage": "https://github.com/daniel-xinyuan-zhu/Quarry#readme"
+}
