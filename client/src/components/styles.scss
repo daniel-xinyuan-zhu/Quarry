@@ -1,0 +1,104 @@
+$lightGray:  #F2F2F2;
+$darkGray: #979797;
+$quarryBlue: #28ABE2;
+
+@mixin makeDiv($x, $y){
+    height: $x;
+    width: $y;
+    background: white;
+}
+
+h1{
+    color: $quarryBlue;
+    font-size:30px;
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+}
+
+.flexBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.App-header {
+    @extend .flexBox;
+    background-color: $lightGray;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.nav{
+    @extend .flexBox;
+    @include makeDiv(70px, 100%);
+    position: fixed;
+    top:0px;
+
+    &__logo{
+        height: 50px;
+        position: fixed;
+        top: 10px;
+        left: 20px;
+    }
+}
+
+
+.container{
+    @extend .flexBox;
+    flex-direction: column;
+    background-color: white;
+
+    &--home{
+        @include makeDiv(500px,600px)
+    }
+
+    &--data{
+        @include makeDiv(300px,600px);
+    }
+
+    &__image{
+        height: 120px;
+        margin-bottom: 20px;
+    }
+
+    &__descrip{
+        color: $darkGray;
+        text-align: left;
+        font-size: 20px;
+        padding: 0px 50px 10px 50px;
+        line-height: 25px;
+    }
+}
+
+.search{
+    @extend .flexBox;
+    @include makeDiv(30px,500px);
+    margin-top: 15px;
+
+    &__bar{
+        height: 100%;
+        width: 100%;
+        font-size:15px;
+
+        ::placeholder{
+            color: $darkGray;
+        }
+    }
+
+    &__icon{
+        background-color: $quarryBlue;
+        height: 100%;
+        padding: 3px;
+    }
+}
+  
+.download-icon{
+    height:30px;
+    margin-left:10px;
+  }
+
+
+
+
+  

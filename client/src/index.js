@@ -5,4 +5,3 @@ import './index.css';
 import _ from 'lodash';
 
 ReactDOM.render(<Routes/>, document.getElementById("root"));
-  
