@@ -13,6 +13,7 @@ const Routes = () => (
           <Route exact path="/" component={HomePage}/>
           <Route path="/dataset" component={DataSet}/>
           <Route path="/displaydata" component={DisplayData}/>
+          <Route path ="/areachart" component = {AChart}/>
         </Switch>
       </Suspense>
     </Router>
