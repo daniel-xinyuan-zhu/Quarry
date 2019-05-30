@@ -32,7 +32,7 @@ export default class DataSet extends Component {
 	
 	render() {
 		if (this.state.toDashboard === true) {
-			return <Redirect to='/' />
+			return <Redirect to='/results' />
 		}
 		return (
 			<div className="DataSet">

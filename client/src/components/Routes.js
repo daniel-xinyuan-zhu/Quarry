@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = lazy(() => import('./App'));
 const DataSet = lazy(() => import('./DataSet'));
+const Results = lazy(() => import('./results'));
 
 
 const Routes = () => (
@@ -11,6 +12,7 @@ const Routes = () => (
         <Switch>
           <Route exact path="/" component={App}/>
           <Route path="/dataset" component={DataSet}/>
+          <Route path="/results" component={Results}/>
         </Switch>
       </Suspense>
     </Router>
