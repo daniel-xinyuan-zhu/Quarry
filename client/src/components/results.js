@@ -24,6 +24,10 @@ export default class Results extends Component {
 	render() {
 		return (
 			<div>
+			<div className="nav">
+					<a href="/"><img className="nav__logo" src={logo} alt="Logo" /></a>
+				</div>
+
 			<BarExample />
 			<LineExample/>
 			<PieExample />
