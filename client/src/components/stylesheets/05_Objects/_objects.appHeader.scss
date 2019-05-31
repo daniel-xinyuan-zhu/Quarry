@@ -1,0 +1,6 @@
+.App-header {
+    @extend .flexBox;
+    background-color: $lightGray;
+    min-height: 100vh;
+    flex-direction: column;
+}

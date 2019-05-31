@@ -8,12 +8,12 @@ import logo from './images/quarry.png'
 import icon from './images/search.png';
 import bar from './images/datadrawing.svg'
 
-// import CSS files
-// import './App.css';
-import './styles.scss';
-import BarExample from './bar';
-import LineExample from './line';
-import PieExample from './pie';
+// import SASS stylesheet
+import '../components/styles.scss';
+
+import BarExample from './examples/bar';
+import LineExample from './examples/line';
+import PieExample from './examples/pie';
 
 // ----------------------------------------------------------------------------------------------------------------
 
@@ -62,9 +62,6 @@ export default class HomePage extends Component {
 				</div>
 
 			</header>
-			<BarExample />
-			<LineExample/>
-			<PieExample />
          </div>
     );
   }

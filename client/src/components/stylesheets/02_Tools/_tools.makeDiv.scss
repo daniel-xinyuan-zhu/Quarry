@@ -1,0 +1,5 @@
+@mixin makeDiv($x, $y){
+    height: $x;
+    width: $y;
+    background: white;
+}

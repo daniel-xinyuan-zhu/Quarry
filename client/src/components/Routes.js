@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = lazy(() => import('./App'));
 const DataSet = lazy(() => import('./DataSet'));
-const Results = lazy(() => import('./results'));
+const Results = lazy(() => import('./Results'));
 
 
 const Routes = () => (

@@ -1,0 +1,40 @@
+.container{
+    @extend .flexBox;
+    flex-direction: column;
+    background-color: white;
+
+    &--home{
+        @include makeDiv(500px,600px)
+    }
+
+    &--data{
+        @include makeDiv(300px,600px);
+    }
+
+    &--results{
+        @include makeDiv(200px,600px);
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &--center{
+        @extend .flexBox;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    &__image{
+        height: 120px;
+        margin-bottom: 20px;
+    }
+
+    &__descrip{
+        font-size: 20px;
+        text-align: left;
+        padding: 0px 50px 10px 50px;
+        line-height: 25px;
+        color: $darkGray;
+    }
+}

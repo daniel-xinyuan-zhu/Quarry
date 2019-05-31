@@ -1,0 +1,13 @@
+.nav{
+    @extend .flexBox;
+    @include makeDiv(70px, 100%);
+    position: fixed;
+    top: 0px;
+
+    &__logo{
+        height: 50px;
+        position: fixed;
+        top: 10px;
+        left: 20px;
+    }
+}

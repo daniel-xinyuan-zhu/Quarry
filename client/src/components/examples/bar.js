@@ -1,5 +1,4 @@
 import React from 'react';
-//var React = require('react');
 import {Bar} from 'react-chartjs-2';
 
 const data = {
@@ -17,17 +16,16 @@ const data = {
   ]
 };
 
-// export default React.createClass({
-//   displayName: 'BarExample',
 export default class BarExample extends React.Component {
+
   render() {
     return (
       <div>
-        <h2>Caseloads per Judge</h2>
+        <h2 class="exampleTitle">Caseloads per Judge</h2>
         <Bar
           data={data}
-          width={100}
-          height={50}
+          width={1000}
+          height={150}
           options={{
             maintainAspectRatio: false
           }}
@@ -36,5 +34,3 @@ export default class BarExample extends React.Component {
     );
   }
 }
-
-//});

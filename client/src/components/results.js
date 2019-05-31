@@ -6,14 +6,14 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-ro
 // import photos and icons
 import logo from './images/quarry.png'
 import icon from './images/search.png';
-import bar from './images/datadrawing.svg'
 
-// import CSS files
-// import './App.css';
+// import SASS stylesheet
 import './styles.scss';
-import BarExample from './bar';
-import LineExample from './line';
-import PieExample from './pie';
+
+// import data visualization
+import BarExample from './examples/bar';
+import LineExample from './examples/line';
+import PieExample from './examples/pie';
 
 
 export default class Results extends Component {
@@ -23,15 +23,28 @@ export default class Results extends Component {
   
 	render() {
 		return (
-			<div>
-			<div className="nav">
+			<div className = "Results">
+				<div className="nav">
 					<a href="/"><img className="nav__logo" src={logo} alt="Logo" /></a>
 				</div>
+				
+				<div class="container--center">
+					<div class="container--results flexBox">
+						<p className="container__descrip">Enter another query!</p>
+						<form onSubmit={this.handleSubmit}>
+							<div className="search">
+								<input className="search__bar" type="text" value={this.state.value} placeholder="Enter a query"></input>
+								<input className="search__icon" type="image" src={icon}/>
+							</div>
+						</form>
+					</div>
+				</div>
 
-			<BarExample />
-			<LineExample/>
-			<PieExample />
-         </div>
+
+				<div class="example"><BarExample /></div>
+				<div class="example"><LineExample/></div>
+				<div class="example"><PieExample /></div>
+			</div>
     );
   }
 }

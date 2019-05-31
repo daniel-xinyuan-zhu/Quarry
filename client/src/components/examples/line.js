@@ -33,8 +33,12 @@ export default class LineExample extends React.Component{
   render() {
     return (
       <div>
-        <h2>2019 Clients</h2>
-        <Line data={data} />
+        <h2 class="exampleTitle">2019 Clients</h2>
+        <Line 
+          data={data} 
+          width={1000}
+          height={300}
+        />
       </div>
     );
   }

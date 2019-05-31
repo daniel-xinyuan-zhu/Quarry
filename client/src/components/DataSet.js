@@ -9,7 +9,7 @@ import logo from './images/quarry.png';
 import icon from './images/search.png';
 import downloadIcon from './images/download-icon.png';
 
-// import CSS files
+// import SASS stylesheet
 import './styles.scss';
 
 
@@ -43,7 +43,7 @@ export default class DataSet extends Component {
 
 					<div className="container container--data">
 						<div class="flexBox">
-							<h1>Borussia Dortmund</h1>
+							<h1>Pacer</h1>
 							<input className="download-icon" type="image" src={downloadIcon}/>
 						</div>
 						
