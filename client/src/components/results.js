@@ -13,7 +13,7 @@ import './styles.scss';
 // import data visualization
 import BarExample from './examples/bar';
 import LineExample from './examples/line';
-import PieExample from './examples/pie';
+import PieExample from './pie.js';
 
 
 export default class Results extends Component {
