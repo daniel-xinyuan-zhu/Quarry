@@ -49,12 +49,19 @@ export default class DataSet extends Component {
 						
 						<p className="container__descrip">Data on date, opponent, result, and rating for each game.</p>
 					
-						<form onSubmit={this.handleSubmit}>
-							<div className="search">
-								<input className="search__bar" type="text" value={this.state.value} placeholder="Enter a query"></input>
-								<input className="search__icon" type="image" src={icon}/>
+						<form onSubmit={this.handleSubmit} class="queryForm">
+							<div className="select">
+								{/* <input className="search__bar" type="text" value={this.state.value} placeholder="Search for a data set"></input>
+								<input className="search__icon" type="image" src={icon}/> */}
+								<select name="options" className="select__menu">
+									<option>Question 1</option>
+									<option>Question 2</option>
+									<option>Question 3</option>
+									<option>Question 4</option>
+								</select>
+								<input type="submit" class="select__submit"></input>
 							</div>
-						</form> 
+						</form>
 					</div>
 				</header>
 			</div>

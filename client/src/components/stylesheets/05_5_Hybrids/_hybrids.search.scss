@@ -19,3 +19,29 @@
         padding: 3px;
     }
 }
+
+.queryForm{
+    width: 100%;
+}
+.select{
+    @extend .flexBox;
+    flex-direction: column;
+
+    &__menu{
+        height: 30px;
+        width: 85%;
+        font-size:15px;
+    }
+
+    input[type=submit] {
+        font-size: 16px;
+        padding: 12px 25px; 
+        margin-top: 20px;
+        color: white;
+        background-color: $quarryBlue;
+        border: 0 none;
+        cursor:pointer;
+        border-radius: 5px; 
+    }
+}
+
