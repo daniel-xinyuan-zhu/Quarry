@@ -26,27 +26,27 @@ export default class HomePage extends Component {
 			}))
 	}
 
-	componentDidMount = () => {
-		axios.get("http://localhost:8080/case?query=caselengthbyjudge")
-		.then(res => {
-			var arr = Object.keys(res.data).map(function(key) {
-			  return [key, res.data[key]];
-			});
-			console.log("returned results: " + Array.isArray(arr))
-			 const dataFromServer = arr;
-			// let a = this.state.data.slice(); //creates the clone of the state
-			// a =dataFromServer;
-			this.setState({[data]: dataFromServer});
-			// this.setState(state => {
-			//       //const data = state.data.concat(dataFromServer);
-			//        const data = [...state.data, dataFromServer];
-			//       return {
-			//         data,
-			//       };
-			//     });
-			//this.setState({data:[...this.state.data, dataFromServer]});
-		});
-	}
+	// componentDidMount = () => {
+	// 	axios.get("http://localhost:8080/case?query=caselengthbyjudge")
+	// 	.then(res => {
+	// 		var arr = Object.keys(res.data).map(function(key) {
+	// 		  return [key, res.data[key]];
+	// 		});
+	// 		console.log("returned results: " + Array.isArray(arr))
+	// 		 //const dataFromServer = arr;
+	// 		this.setState({data: arr}, () => {
+ //      console.log(this.state.data.length + " it worksss");
+ //    });
+	// 		// this.setState(state => {
+	// 		//       //const data = state.data.concat(dataFromServer);
+	// 		//        const data = [...state.data, dataFromServer];
+	// 		//       return {
+	// 		//         data,
+	// 		//       };
+	// 		//     });
+	// 		//this.setState({data:[...this.state.data, dataFromServer]});
+	// 	});
+	// }
 	  
 	
 	render() {

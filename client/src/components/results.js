@@ -18,10 +18,38 @@ import PieExample from './pie.js';
 
 export default class Results extends Component {
 	state = {
-		toDashboard: false,
+		toResults: false,
+		//data: []
 	}
+
+	// handleSubmit = (user) => {
+	// 	this.setState(() => ({
+	// 		toResults: true
+	// 		}))
+	// }
+
+	// componentDidMount = () => {
+	// 	axios.get("http://localhost:8080/case?query=countcasetypesperjudge")
+	// 	.then(res => {
+	// 		var arr = Object.keys(res.data).map(function(key) {
+	// 		  return [key, res.data[key]];
+	// 		});
+	// 		console.log("returned results: " + Array.isArray(arr))
+	// 		 //const dataFromServer = arr;
+	// 		this.setState({data: arr}, () => {
+ //      console.log(this.state.data.length + " it worksss");
+ //    });
+	// 	});
+	// }
   
 	render() {
+		// if (this.state.data.length>0 ) {
+
+		// 	return (
+		// 		<div class="example"><value = {this.state.data} BarExample/></div>
+		// 	)
+  //     }
+
 		return (
 			<div className = "Results">
 				<div className="nav">
@@ -33,7 +61,6 @@ export default class Results extends Component {
 						<form onSubmit={this.handleSubmit} class="queryForm">
 						<div className="select">
 							<input className="search__bar" type="text" value={this.state.value} placeholder="Want to ask another question?"></input>
-						
 						</div>
 					</form>
 					</div>
