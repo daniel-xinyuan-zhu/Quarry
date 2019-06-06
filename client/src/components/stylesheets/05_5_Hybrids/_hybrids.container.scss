@@ -13,7 +13,7 @@
     }
 
     &--results{
-        width: 100%;
+        @include makeDiv(200px,600px);
         justify-content: center;
         flex-direction: column;
     }
