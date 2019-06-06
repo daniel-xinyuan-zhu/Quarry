@@ -51,8 +51,26 @@ export default class HomePage extends Component {
 					<div>
 						<h1>Making Data Access Easy</h1>
 						<p className="container__descrip">Quarry is a conversational system that provides users with a non-technical way to query large data sets. Simply type in questions about data in a data set, and Quarry will quickly supply and visualize answers!</p>
-						<p className="container__descrip">Search for a data set to get started!</p>
+						
 					</div>
+					<div class="container--center">
+					<div class="container--results flexBox">
+						<p className="container__descrip">What can I help you with today?</p>
+						<form onSubmit={this.handleSubmit} class="queryForm">
+						<div className="select">
+							{/* <input className="search__bar" type="text" value={this.state.value} placeholder="Search for a data set"></input>
+							<input className="search__icon" type="image" src={icon}/> */}
+							<select name="options" className="select__menu">
+								<option>Question 1</option>
+								<option>Question 2</option>
+								<option>Question 3</option>
+								<option>Question 4</option>
+							</select>
+							<input type="submit" class="select__submit"></input>
+						</div>
+					</form>
+					</div>
+				</div>
 					<form onSubmit={this.handleSubmit} class="search">
 						{/* <div className="select"> */}
 							<input className="search__bar" type="text" value={this.state.value} placeholder="Search for a data set"></input>
