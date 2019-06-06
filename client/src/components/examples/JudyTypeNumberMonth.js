@@ -1,29 +1,30 @@
 import React from 'react';
 import {Bar} from 'react-chartjs-2';
 
-const year = {
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', "Sep", 'Oct', 'Nov', 'Dec'],
+
+const month = {
+  labels: ['Crime', 'Vehicle', 'Homeowner', 'Taxation', 'Education', 'Animal', 'Contract'],
   datasets: [
     {
-      label: 'Number of cases in the past year',
+      label: 'Number of cases in the past month',
       backgroundColor: 'rgba(255,99,132,0.2)',
       borderColor: 'rgba(255,99,132,1)',
       borderWidth: 1,
       hoverBackgroundColor: 'rgba(255,99,132,0.4)',
       hoverBorderColor: 'rgba(255,99,132,1)',
-      data: [1, 4, 7, 10, 9, 12, 3, 6, 11, 5, 5, 8]
+      data: [1, 3, 3, 1, 0, 1]
     }
   ]
 };
 
-export default class JudyCaseNumberYear extends React.Component {
+export default class JudyTypeNumberMonth extends React.Component {
 
   render() {
     return (
       <div>
-        <h2 class="exampleTitle">Number of cases in the past year for Judge Judy</h2>
+        <h2 class="exampleTitle">Case types in the past month for Lawyer Judy</h2>
         <Bar
-          data={year}
+          data={month}
           width={1000}
           height={150}
           options={{
@@ -33,5 +34,4 @@ export default class JudyCaseNumberYear extends React.Component {
       </div>
     );
   }
-}
-
+  }
