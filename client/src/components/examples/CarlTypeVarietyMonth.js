@@ -4,7 +4,7 @@ import {Pie} from 'react-chartjs-2';
 const data = {
 	labels: ['Crime', 'Vehicle', 'Homeowner', 'Taxation', 'Education', 'Animal', 'Contract'],
 	datasets: [{
-		data: [0, 1, 0, 1, 0, 0, 1],
+		data: [10, 21, 4, 26, 11, 3, 19],
 		backgroundColor: [
 		'#ff0000',
 		'#ffa500',
@@ -26,12 +26,12 @@ const data = {
 	}]
 };
 
-export default class JudyTypeVarietyWeek extends React.Component{
+export default class CarlTypeVarietyMonth extends React.Component{
 
   render() {
     return (
       <div>
-        <h2 class="exampleTitle">Case type variety in the past week for Lawyer Judy</h2>
+        <h2 class="exampleTitle">Case type variety in the past month for Judge Carl</h2>
 				<Pie 
 					data={data} 
 					width={400}

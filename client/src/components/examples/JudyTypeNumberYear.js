@@ -11,7 +11,7 @@ const year = {
       borderWidth: 1,
       hoverBackgroundColor: 'rgba(255,99,132,0.4)',
       hoverBorderColor: 'rgba(255,99,132,1)',
-      data: [1, 4, 7, 4, 2, 3]
+      data: [1, 4, 7, 4, 2, 3, 5]
     }
   ]
 };
