@@ -17,6 +17,19 @@ const JTVW = lazy(() => import('./examples/JudyTypeVarietyWeek'));
 const JTVY = lazy(() => import('./examples/JudyTypeVarietyYear'));
 const JTVM = lazy(() => import('./examples/JudyTypeVarietyMonth'));
 
+const CCDM = lazy(() => import('./examples/CarlCaseDistributionMonth'));
+const CCDW = lazy(() => import('./examples/CarlCaseDistributionWeek'));
+const CCDY = lazy(() => import('./examples/CarlCaseDistributionYear'));
+const CCTM = lazy(() => import('./examples/CarlCaseTrendMonth'));
+const CCTW = lazy(() => import('./examples/CarlCaseTrendWeek'));
+const CCTY = lazy(() => import('./examples/CarlCaseTrendYear'));
+const CTNW = lazy(() => import('./examples/CarlTypeNumberWeek'));
+const CTNY = lazy(() => import('./examples/CarlTypeNumberYear'));
+const CTNM = lazy(() => import('./examples/CarlTypeNumberMonth'));
+const CTVW = lazy(() => import('./examples/CarlTypeVarietyWeek'));
+const CTVY = lazy(() => import('./examples/CarlTypeVarietyYear'));
+const CTVM = lazy(() => import('./examples/CarlTypeVarietyMonth'));
+
 const Routes = () => (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
@@ -35,6 +48,19 @@ const Routes = () => (
           <Route path="/jtvm" component={JTVM} />
           <Route path="/jtvw" component={JTVW} />
           <Route path="/jtvy" component={JTVY} />
+          
+          <Route path="/ccdm" component={CCDM} />
+          <Route path="/ccdw" component={CCDW} />
+          <Route path="/ccdy" component={CCDY} />
+          <Route path="/cctm" component={CCTM} />
+          <Route path="/cctw" component={CCTW} />
+          <Route path="/ccty" component={CCTY} />
+          <Route path="/ctnm" component={CTNM} />
+          <Route path="/ctnw" component={CTNW} />
+          <Route path="/ctny" component={CTNY} />
+          <Route path="/ctvm" component={CTVM} />
+          <Route path="/ctvw" component={CTVW} />
+          <Route path="/ctvy" component={CTVY} />
         </Switch>
       </Suspense>
     </Router>

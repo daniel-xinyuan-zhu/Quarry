@@ -28,6 +28,18 @@ export default class HomePage extends Component {
 		JTVM: false,
 		JTVW: false,
 		JTVY: false,
+		JCDM: false,
+		CCDW: false,
+		CCDY: false,
+		CCTM: false,
+		CCTW: false,
+		CCTY: false,
+		CTNM: false,
+		CTNW: false,
+		CTNY: false,
+		CTVM: false,
+		CTVW: false,
+		CTVY: false,
 		toDashboard: false,
 	}
 
@@ -148,6 +160,81 @@ export default class HomePage extends Component {
 					if (this.state.timeperiod === 'year'){
 						this.setState(() => ({
 							JTVY: true
+						}))
+					}
+				}
+			}
+			
+		}
+		else{
+			if (this.state.caseortype === 'case'){
+				if (this.state.caseGraph === 'distribution'){
+					if (this.state.timeperiod === 'month'){
+						this.setState(() => ({
+							CCDM: true
+						}))
+					}
+					if (this.state.timeperiod === 'week'){
+						this.setState(() => ({
+							CCDW: true
+						}))
+					}
+					if (this.state.timeperiod === 'year'){
+						this.setState(() => ({
+							CCDY: true
+						}))
+					}
+				}
+				else{
+					if (this.state.timeperiod === 'month'){
+						this.setState(() => ({
+							CCTM: true
+						}))
+					}
+					if (this.state.timeperiod === 'week'){
+						this.setState(() => ({
+							CCTW: true
+						}))
+					}
+					if (this.state.timeperiod === 'year'){
+						this.setState(() => ({
+							CCTY: true
+						}))
+					}
+				}
+			}
+			if (this.state.caseortype === 'caseType'){
+				if (this.state.caseGraph === 'number'){
+					if (this.state.timeperiod === 'month'){
+						this.setState(() => ({
+							CTNM: true
+						}))
+					}
+					if (this.state.timeperiod === 'week'){
+						this.setState(() => ({
+							CTNW: true
+						}))
+					}
+					if (this.state.timeperiod === 'year'){
+						this.setState(() => ({
+							CTNY: true
+						}))
+					}
+				}
+				else{
+					if (this.state.timeperiod === 'month'){
+						this.setState(() => ({
+							CTVM: true
+						}))
+					}
+					if (this.state.timeperiod === 'week'){
+						this.setState(() => ({
+							CTVW: true
+						}))
+					}
+					if (this.state.timeperiod === 'year'){
+						this.setState(() => ({
+							CTVY: true
 						}))
 					}
 				}
