@@ -26,8 +26,7 @@ export default class BarExample extends React.Component {
 			console.log("judges: "+ labels.length)
 			console.log("types: "+ d.length)
 		});
-
-
+		
 		const data = {
 			labels: labels,
 			datasets: [
