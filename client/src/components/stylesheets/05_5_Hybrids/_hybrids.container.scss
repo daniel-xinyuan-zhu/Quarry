@@ -4,7 +4,8 @@
     background-color: white;
 
     &--home{
-        @include makeDiv(500px,600px)
+        @include makeDiv(600px,600px);
+        margin-top: 50px;
     }
 
     &--data{
@@ -12,7 +13,7 @@
     }
 
     &--results{
-        @include makeDiv(200px,600px);
+        width: 100%;
         justify-content: center;
         flex-direction: column;
     }
@@ -32,6 +33,7 @@
 
     &__descrip{
         font-size: 20px;
+        width: 85%;
         text-align: left;
         padding: 0px 50px 10px 50px;
         line-height: 25px;
