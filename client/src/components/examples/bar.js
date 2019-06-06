@@ -18,13 +18,14 @@ let d = []
     console.log("returned results: " + Array.isArray(arr))
        //const dataFromServer = arr;
        arra = arr;
-       console.log(arra.length + " it worksss");
-       for (let kv in arra) {
-        labels.push(kv.judge);
-        d.push(kv['COUNT(case_type)']);
+       console.log(JSON.stringify(arr[0][1].judge) + " it worksss");
+       for (let kv of arr) {
+        labels.push(kv[1]['judge']);
+        d.push(kv[1]['COUNT(case_type)']);
+        console.log("judge: " + kv.judge)
       }
-      console.log("judges: "+ labels.length)
-      console.log("types: "+ d.length)
+      console.log("judges: "+ labels)
+      console.log("types: "+ d)
     });
 
 
@@ -32,7 +33,7 @@ let d = []
 
 
 
-const data = {
+var data = {
   labels: labels,
   datasets: [
   {
