@@ -30,18 +30,10 @@ export default class Results extends Component {
 				
 				<div class="container--center">
 					<div class="container--results flexBox">
-						<p className="container__descrip">What can I help you with today?</p>
 						<form onSubmit={this.handleSubmit} class="queryForm">
 						<div className="select">
-							{/* <input className="search__bar" type="text" value={this.state.value} placeholder="Search for a data set"></input>
-							<input className="search__icon" type="image" src={icon}/> */}
-							<select name="options" className="select__menu">
-								<option>Question 1</option>
-								<option>Question 2</option>
-								<option>Question 3</option>
-								<option>Question 4</option>
-							</select>
-							<input type="submit" class="select__submit"></input>
+							<input className="search__bar" type="text" value={this.state.value} placeholder="Want to ask another question?"></input>
+						
 						</div>
 					</form>
 					</div>
