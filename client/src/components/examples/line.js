@@ -1,15 +1,22 @@
 import React from 'react';
 import {Line} from 'react-chartjs-2';
 
+export default class LineExample extends React.Component{
+
+  render() {
+
+
+
+
 const data = {
-  labels: ['January', 'February', 'March', 'April', 'May'],
+  labels: ['2009', '2010'],
   datasets: [
     {
       label: 'Number of clients in 2019',
       fill: false,
       lineTension: 0.1,
-      backgroundColor: 'rgba(75,192,192,0.4)',
-      borderColor: 'rgba(75,192,192,1)',
+      backgroundColor: '#28ABE2',
+      borderColor: '#28ABE2',
       borderCapStyle: 'butt',
       borderDash: [],
       borderDashOffset: 0.0,
@@ -23,14 +30,12 @@ const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [65, 59, 80, 81, 56]
+      data: [76, 2886]
     }
   ]
 };
 
-export default class LineExample extends React.Component{
 
-  render() {
     return (
       <div>
         <h2 class="exampleTitle">2019 Clients</h2>

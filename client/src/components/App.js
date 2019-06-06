@@ -73,7 +73,7 @@ export default class HomePage extends Component {
 					</div>
 					<p className="container__descrip">What would you like to know?</p>
 
-					<div class="container--results flexBox">
+					<div class="flexBox">
 						<form onSubmit={this.handleSubmit}>
 							<div className="search">
 								<input className="search__bar" type="text" value={this.state.value} placeholder="Enter a query"></input>

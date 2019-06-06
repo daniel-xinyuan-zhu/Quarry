@@ -4,12 +4,11 @@ import {Retrieve} from './retrieve.js';
 
 const data = {
 	labels: [
-		'Food',
-		'Corporate',
-		'Transportation'
+		'civil',
+		'crriminal'
 	],
 	datasets: [{
-		data: [300, 50, 100],
+		data: [82, 43],
 		backgroundColor: [
 		'#FF6384',
 		'#36A2EB',
@@ -30,7 +29,7 @@ export default class PieExample extends React.Component{
   render() {
     return (
       <div>
-        <h2>Monthly Expenses</h2>
+        <h2>Distribution of cases for Judge Virginia M. Kendall</h2>
         <Pie data={data} />
       </div>
     );

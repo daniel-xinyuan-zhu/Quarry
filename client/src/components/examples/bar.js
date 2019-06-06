@@ -38,8 +38,8 @@ var data = {
   datasets: [
   {
     label: 'Caseloads per judge',
-    backgroundColor: 'rgba(255,99,132,0.2)',
-    borderColor: 'rgba(255,99,132,1)',
+    backgroundColor: '#28ABE2',
+    borderColor: '#28ABE2',
     borderWidth: 1,
     hoverBackgroundColor: 'rgba(255,99,132,0.4)',
     hoverBorderColor: 'rgba(255,99,132,1)',
