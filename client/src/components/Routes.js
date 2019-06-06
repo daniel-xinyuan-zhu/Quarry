@@ -2,7 +2,6 @@ import React, { Component, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = lazy(() => import('./App'));
-const DataSet = lazy(() => import('./DataSet'));
 const Results = lazy(() => import('./results.js'));
 const JCDM = lazy(() => import('./examples/JudyCaseDistributionMonth'));
 const JCDW = lazy(() => import('./examples/JudyCaseDistributionWeek'));

@@ -59,21 +59,21 @@ export default class HomePage extends Component {
 			<div className="HomePage">
 				<header className="App-header">
 				
+				{/* NAVIGATION BAR */}
 				<div className="nav">
 					<a href="/"><img className="nav__logo" src={logo} alt="Logo" /></a>
 				</div>
 
 				<div className="container container--home">
-				<p>{this.state.data}</p>
+					<p>{this.state.data}</p>
 					<img className="container__image" src={bar}></img>
 					<div>
 						<h1>Making Data Access Easy</h1>
 						<p className="container__descrip">Quarry is a conversational system that provides users with a non-technical way to query large data sets. Simply type in questions about data in a data set, and Quarry will quickly supply and visualize answers!</p>
-						
 					</div>
 					<p className="container__descrip">What would you like to know?</p>
 
-					<div class="container--results flexBox">
+					<div class="flexBox">
 						<form onSubmit={this.handleSubmit}>
 							<div className="search">
 								<input className="search__bar" type="text" value={this.state.value} placeholder="Enter a query"></input>

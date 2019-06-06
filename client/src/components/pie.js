@@ -30,8 +30,12 @@ export default class PieExample extends React.Component{
   render() {
     return (
       <div>
-        <h2>Monthly Expenses</h2>
-        <Pie data={data} />
+        <h2 class="exampleTitle">Monthly Expenses</h2>
+		<Pie 
+			data={data} 
+			width={500}
+			height={500}
+		/>
       </div>
     );
   }
